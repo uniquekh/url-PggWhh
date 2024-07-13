@@ -46,7 +46,7 @@ fail_cap =f"**➜ This file Contain Failed Downloads while Downloding \n You Can
 global videocount, pdfcount  # Declare videocount and pdfcount as global variables
 
 #url var 
-pwdl = os.environ.get("api")
+pwdl = os.environ.get("https://pw.jarviis.workers.dev?v=")
 
 processing_request = False  # Variable to track if a request is being processed
 
