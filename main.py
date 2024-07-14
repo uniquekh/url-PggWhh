@@ -468,12 +468,12 @@ async def account_login(bot: Client, m: Message):
                 elif ".pdf" in url:
                     try:
                         time.sleep(1)
-                        #prog = await m.reply_text(f"📥 **Downloading **\n\n**➭ Index » {str(count).zfill(3)} **\n**➭ File » ** `{name}`\n**➭ Link »** `{url}`\n\n✨ **Bot Made by Devansh**\n**━━━━━━━✦✗✦━━━━━━━**")
+                        prog = await m.reply_text(f"📥 **Downloading **\n\n**➭ Index » {str(count).zfill(3)} **\n**➭ File » ** `{name}`\n**➭ Link »** `{url}`\n\n✨ **Bot Made by Devansh**\n**━━━━━━━✦✗✦━━━━━━━**")
                         cmd = f'yt-dlp -o "{name}.pdf" "{url}"'
                         download_cmd = f"{cmd} -R 25 --fragment-retries 25"
                         os.system(download_cmd)
                         time.sleep(1)
-                        #await prog.delete (True)
+                        await prog.delete (True)
                         start_time = time.time()
                         reply = await m.reply_text(f"**⚡️ Starting Uploding ...** - `{name}`")
                         time.sleep(1)
@@ -505,7 +505,7 @@ async def account_login(bot: Client, m: Message):
                 else:
                     prog = await m.reply_text(f"📥 **Downloading **\n\n**➭ Count » {str(count).zfill(3)} **\n**➭ Video Name » ** `{name}`\n**➭ Quality** » `{raw_text2}`\n**➭ Video Url »** `{url}`\n**➭ Thumbnail »** `{input6.text}` \n\n✨ **Bot Made by Devansh**\n**━━━━━━━✦✗✦━━━━━━━**")
                     time.sleep(2)
-                    res_file = await helper.drm_download_video(url,quality, name,key)
+                    res_file = await helper.download_video(url, cmd, name)
                     filename = res_file
                     await prog.delete(True)
                     time.sleep(1)
