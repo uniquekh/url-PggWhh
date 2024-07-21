@@ -6,5 +6,6 @@ RUN apt -qq update && apt -qq install -y git wget pv jq python3-dev ffmpeg media
 COPY . .
 RUN pip3 install -r requirements.txt
 RUN apt install ffmpeg
+RUN chmod +x N_m3u8FL-RE.exe
 
 CMD gunicorn app:app & python3 main.py
