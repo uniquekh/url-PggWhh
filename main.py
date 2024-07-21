@@ -422,9 +422,9 @@ async def account_login(bot: Client, m: Message):
                 else: 
                     url = url    
                 print("mpd check")
-                key = await helper.get_drm_keys(url)
-                print(key)
-                await m.reply_text(f"got keys form api : \n`{key}`")
+                keys = await helper.get_drm_keys(url)
+                print(keys)
+                await m.reply_text(f"got keys form api : \n`{keys}`")
           
             if "/master.mpd" in url:
                 cmd= f" yt-dlp -k --allow-unplayable-formats -f bestvideo.{quality} --fixup never {url} "
