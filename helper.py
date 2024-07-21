@@ -244,7 +244,7 @@ async def get_drm_keys(url: str):
     mpd_url, key = await Penpencil.get_mpd_keys_title(url)
     return key
 
-async def drm_download_video(url, qual, name, keys):
+async def drm_download_video(url, quality, name, keys):
 
     print(keys)
     keys = keys.split(":")
@@ -254,16 +254,16 @@ async def drm_download_video(url, qual, name, keys):
     key1, key2 = keys
 
 
-    if qual =="1":
+    if quality =="1":
         nqual="720"
 
-    elif qual=="2":
+    elif quality=="2":
         nqual= "480" 
 
-    elif qual =="3":
+    elif quality =="3":
         nqual="360"
 
-    elif qual=="4":
+    elif quality=="4":
         nqual="240"
     else :
         nqual="480"                
