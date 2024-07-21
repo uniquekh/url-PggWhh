@@ -505,7 +505,7 @@ async def account_login(bot: Client, m: Message):
                 else:
                     prog = await m.reply_text(f"📥 **Downloading **\n\n**➭ Count » {str(count).zfill(3)} **\n**➭ Video Name » ** `{name}`\n**➭ Quality** » `{raw_text2}`\n**➭ Video Url »** `{url}`\n**➭ Thumbnail »** `{input6.text}` \n\n✨ **Bot Made by Devansh**\n**━━━━━━━✦✗✦━━━━━━━**")
                     time.sleep(2)
-                    res_file = await helper.drm_download_video(url, cmd, name)
+                    res_file = await helper.drm_download_video(url, qual, name, keys):
                     filename = res_file
                     await prog.delete(True)
                     time.sleep(1)
