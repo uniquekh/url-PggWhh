@@ -4,7 +4,7 @@ API_ID = API_ID =  21179966
 
 API_HASH = os.environ.get("API_HASH", "d97919fb0a3c725e8bb2a25bbb37d57c")
 
-BOT_TOKEN = os.environ.get("BOT_TOKEN", "7327949614:AAF1B4KKfdpGcIJModJNhGd2jpvxKtcxWnw")
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "7130247687:AAH62Amtb4TC2V63iwyNdccxzqL5Jo8gFwY")
 
 PASS_DB = int(os.environ.get("PASS_DB", "721"))
 
