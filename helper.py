@@ -20,8 +20,8 @@ import re
 
 
 # pw_token = os.environ.get("token")
-# pw_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjAwOTY5OTkuODczLCJkYXRhIjp7Il9pZCI6IjYwY2UxMzU0ZDdlMjNjMDAxMTBkYzU1OCIsInVzZXJuYW1lIjoiOTk2NzI2MzMwMyIsImZpcnN0TmFtZSI6IkRldmFuc2giLCJsYXN0TmFtZSI6IkJoYW51c2hhbGkiLCJvcmdhbml6YXRpb24iOnsiX2lkIjoiNWViMzkzZWU5NWZhYjc0NjhhNzlkMTg5Iiwid2Vic2l0ZSI6InBoeXNpY3N3YWxsYWguY29tIiwibmFtZSI6IlBoeXNpY3N3YWxsYWgifSwiZW1haWwiOiJkZXZhbnNoYmhhbnVzaGFsaTEyQGdtYWlsLmNvbSIsInJvbGVzIjpbIjViMjdiZDk2NTg0MmY5NTBhNzc4YzZlZiJdLCJ0eXBlIjoiVVNFUiJ9LCJpYXQiOjE3MTk0OTIxOTl9.T4p_zzFHmL1FYIh7ZddaytjQuvImofVluswVPF1_GFM"
-pw_token = "9550bce0978b3f1354cf0b4b0ad81afaf2e1283d372f8aa87749854701a12da6"
+pw_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjIxMzM4MzkuOTM2LCJkYXRhIjp7Il9pZCI6IjYyYTYwYWM0MWEzMDk3MDAxMTMyMmZjOCIsInVzZXJuYW1lIjoiODI3MjA1NTA1NCIsImZpcnN0TmFtZSI6IlVOSVFVRSIsImxhc3ROYW1lIjoiVU5JUVVFIiwib3JnYW5pemF0aW9uIjp7Il9pZCI6IjVlYjM5M2VlOTVmYWI3NDY4YTc5ZDE4OSIsIndlYnNpdGUiOiJwaHlzaWNzd2FsbGFoLmNvbSIsIm5hbWUiOiJQaHlzaWNzd2FsbGFoIn0sImVtYWlsIjoibXVqZWVtMDAwQGdtYWlsLmNvbSIsInJvbGVzIjpbIjViMjdiZDk2NTg0MmY5NTBhNzc4YzZlZiJdLCJjb3VudHJ5R3JvdXAiOiJJTiIsInR5cGUiOiJVU0VSIn0sImlhdCI6MTcyMTUyOTAzOX0.SnzidAv5BzTeecU5MjrexdpEgZHMIgaQY49VcdblJQY"
+#pw_token = "9550bce0978b3f1354cf0b4b0ad81afaf2e1283d372f8aa87749854701a12da6"
 
 def duration(filename):
     result = subprocess.run([
@@ -147,11 +147,11 @@ async def get_pssh_kid(mpd_url: str, headers: dict = {}, cookies: dict = {}):
 
 
 class Penpencil:
-    otp_url = "https://api.penpencil.xyz/v1/videos/get-otp?key="
+    otp_url = "https://api.penpencil.co/v1/videos/get-otp?key="
     penpencil_bearer = f'{pw_token}'
 
     headers = {
-        "Host": "api.penpencil.xyz",
+        "Host": "api.penpencil.co",
         "content-type": "application/json",
         "authorization": f"Bearer {pw_token}",
         "client-version": "11",
